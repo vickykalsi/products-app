@@ -1,11 +1,11 @@
 # frontend node modules
-./frontend/node_modules
-./frontend/bun.lock
+frontend/node_modules
+frontend/bun.lock
 
 # backend level
-./backend/node_modules
-./backend/.env
-./backend/bun.lock
+backend/node_modules
+backend/.env
+backend/bun.lock
 
 # root level
 node_modules
