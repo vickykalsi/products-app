@@ -1,0 +1,22 @@
+.button-container{
+  display: flex;
+  gap:1rem;
+  justify-content: center;
+}
+
+.button-container button{
+  border: none;
+  border-radius: 2rem;
+}
+
+.product-container{
+  text-align: center;
+}
+
+.product-image{
+  border-radius: 2rem;
+}
+
+.product-name{
+  text-decoration: none;
+}
