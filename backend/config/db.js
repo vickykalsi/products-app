@@ -1,6 +1,6 @@
 import pg from "pg";
 import env from "dotenv";
-env.config({ path: "./backend/.env" });
+env.config();
 
 const client=new pg.Client({
   user:"postgres",
