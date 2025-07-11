@@ -5,14 +5,14 @@ const productRouter=express.Router();
 
 productRouter.get("/test",apiTest);
 
-productRouter.get("/:id([0-9]+)",getAProduct);
+productRouter.get("/:id",getAProduct);
 
 productRouter.get("/",getAllProducts);
 
 productRouter.post("/",addAProduct);
 
-productRouter.patch("/:id([0-9]+)",updateAProduct);
+productRouter.patch("/:id",updateAProduct);
 
-productRouter.delete("/:id([0-9]+)",deleteAProduct);
+productRouter.delete("/:id",deleteAProduct);
 
 export default productRouter;
