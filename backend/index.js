@@ -7,10 +7,15 @@ import helmet from "helmet";
 import morgan from "morgan";
 import productRouter from "./routes/productRoutes.js";
 import client from "./config/db.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const port = process.env.PORT;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use(cors());
 app.use(express.json());
 app.use(helmet());
@@ -33,6 +38,10 @@ const startDB = async function () {
     throw error;
   }
 }
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+});
 
 startDB().then(() => {
   app.listen(port, () => {
