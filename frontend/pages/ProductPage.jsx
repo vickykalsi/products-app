@@ -24,7 +24,7 @@ function ProductPage() {
     e.preventDefault();
     if (confirm("Do you want to delete this product?")) {
       try {
-        await axios.delete(`http://localhost:3000/api/v1/products/${id}`);
+        await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/${id}`);
         toast.success("product has been successfully deleted!");
         navigate("/");
       }

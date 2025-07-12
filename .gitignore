@@ -1,6 +1,7 @@
 # frontend node modules
 frontend/node_modules
 frontend/bun.lock
+frontend/.env
 
 # backend level
 backend/node_modules

@@ -13,7 +13,7 @@ function EditProductPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     try {
-      await axios.patch(`http://localhost:3000/api/v1/products/${id}`, data);
+      await axios.patch(`${import.meta.env.VITE_API_BASE_URL}/${id}`, data);
       toast.success("product has been successfully edited!");
       setData({ name: "", image: "", price: "" });
       navigate("/");
