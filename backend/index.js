@@ -16,7 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors());
-app.use(helmet());
+app.use(helmet({contentSecurityPolicy:false}));
 app.use(morgan("dev"));
 app.use(express.json());
 app.use("/api/v1/products", productRouter);
