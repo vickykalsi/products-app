@@ -2,7 +2,7 @@ import axios from "axios";
 
 async function loadProducts(){
   try{
-    const response=await axios.get("http://localhost:3000/api/v1/products");
+    const response=await axios.get(`${import.meta.env.VITE_API_BASE_URL}`);
     return response.data;
   }
   catch(error){

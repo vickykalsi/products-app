@@ -14,7 +14,7 @@ function AddNewProductPage() {
     }
     else {
       try {
-        await axios.post(`${import.meta.env.VITE_API_BASE_URL}/products`, data);
+        await axios.post(`${import.meta.env.VITE_API_BASE_URL}`, data);
         toast.success("product has been successfully created!");
         setData({ name: "", image: "", price: "" });
         navigate("/");

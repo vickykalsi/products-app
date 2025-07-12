@@ -1,6 +1,6 @@
 import pg from "pg";
 import env from "dotenv";
-env.config();
+env.config({path:"./backend/.env"});
 
 let client;
 if (process.env.NODE_ENV == "production") {
@@ -20,6 +20,5 @@ else {
     port: 5432
   });
 }
-
 
 export default client;
